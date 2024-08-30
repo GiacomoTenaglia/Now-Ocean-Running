@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step Counter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Step Counter</h1>
-    <p>Steps: <span id="stepCount">0</span></p>
-    <button id="startButton" onclick="startStepCounter()">Start Counting Steps</button>
-    <p id="statusMessage"></p>
-
+    <div class="container">
+        <header>
+            <img src="img/now_ocean_logo.png" alt="Logo" class="logo">
+            <h1>Step Counter</h1>
+        </header>
+        <main>
+            <p class="step-count">Steps: <span id="stepCount">0</span></p>
+            <button id="startButton" onclick="startStepCounter()">Start Counting Steps</button>
+            <p id="statusMessage"></p>
+        </main>
+        <footer>
+            <p>&copy; 2024 Step Counter App. All rights reserved.</p>
+        </footer>
+    </div>
     <script src="stepCounter.js"></script>
 </body>
 </html>
+

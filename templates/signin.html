@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+    <script src="https://kit.fontawesome.com/aa8a891721.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1>Login Form</h1>
+    <div class="center-wrapper">
+        <form method="post">
+    
+            <label for="email">Email:</label><br>
+            <input type="text" name="email" required value="{{request.form['email']}}"><br><br>
+    
+            <label for="password">Password:</label><br>
+            <input name="password" required value="{{request.form['password']}}"><br><br>
+    
+            <button type="submit">LOGIN</button>
+			<div class="btn-field">
+				<a href="{{ url_for('signup') }}" id="signupBtn" class="disable button">Sign Up</a>
+			</div>
+        </form>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message flash-{{ category }}">
+                    <p>{{ message }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</body>
+
+</html>

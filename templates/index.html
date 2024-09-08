@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo" class="logo">
+        <h1>Step Counter</h1>
+    </header>
+
+    <main>
+        <h2>Track your steps</h2>
+        <p>Total Steps: <span id="stepCount">0</span></p>
+        <button id="startStopBtn" onclick="startStepCounter()">&#9654;</button> <!-- Play Icon initially -->
+    </main>
+
+    <script src="{{ url_for('static', filename='js/stepCounter.js') }}"></script>
+</body>
+</html>
+
+
+
